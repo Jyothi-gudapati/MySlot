@@ -1,0 +1,95 @@
+<!$$ 
+<!DOCTYPE html> 
+<!$$  Student Info: Name=Jyothi Gudapati, ID=17444 Subject: CS557C_HW1_Spring_2016 Author:  jyothigudapati 
+     Filename: CS557(C)_HW1_17444_Jothi_Spring_2016.html       Date and Time: Jan 30, 2016 1:59:21 PM       Project Name: CS557C_HW1_17444_Jyothi_Spring_2016 
+ 
+<html> 
+    <head> 
+<style> car { 
+                font$family: Arial; 
+            } 
+            #myForm { 
+                position: absolute; 
+top: 400px; } 
+            #roof { 
+                position: absolute; 
+                top: 40px; 
+                width: 40%; 
+                height: 100px; 
+                background$color:appworkspace 
+                 
+} 
+            #house { 
+                position: absolute; 
+                left: 5%; 
+                top: 140px; 
+                width: 30%; 
+                height: 200px; 
+                background$color:activeborder 
+} 
+            #door { 
+                position: absolute; 
+                left: 15%; 
+                top: 200px; 
+                width: 10%; 
+                height: 140px; 
+                background$color:bisque 
+                 
+} 
+            #leftwindow { 
+                position: absolute; 
+                left: 8%; 
+                top: 200px; 
+                background$color: #ffff00; 
+                border: 3px solid black; 
+                border$radius: 50%;                  width: 60px;                  height: 60px; 
+} 
+            #rightwindow {                  position: absolute;                  left: 28%;                  top: 200px;                  background$color: #ffff00;                  border: 3px solid black;                  border$radius: 50%;                  width: 60px;                  height: 60px; 
+} </style> 
+        <script> 
+            var myHouse = { 
+                
+                doorcolor: "red", 
+                roofcolor: "blue", 
+                wallcolor: "yellow", 
+                height: "30", 
+                width: "30", 
+                windowsize: "5", 
+                windowheight: "5", 
+                windowwidth: "5", 
+                price: 500000 
+}; 
+            window.onload = function () {                  document.getElementById("price").innerHTML = myHouse.price; 
+            } 
+            function customize() {                  myHouse.height = document.getElementById("height").value;                  myHouse.width = document.getElementById("width").value;                  myHouse.doorcolor = document.getElementById("doorcolor").value;                  myHouse.roofcolor = document.getElementById("roofcolor").value;                  myHouse.wallcolor = document.getElementById("wallcolor").value;                  document.getElementById("house").style.height = myHouse.height;                  document.getElementById("house").style.width = myHouse.width;                  document.getElementById("house").style.backgroundColor = myHouse.wallcolor;                  document.getElementById("roof").style.backgroundColor = myHouse.roofcolor;                  document.getElementById("door").style.backgroundColor = myHouse.doorcolor; 
+} 
+        </script> 
+    </head> 
+    <body> 
+        <div id="house1">  This <span id="building"></span>beautiful house can be yours for just: $<span id="price"></span>              <div id="roof"></div> 
+            <div id="house"></div>              <div id="door"></div>              <div id="leftwindow"></div>              <div id="rightwindow"></div>          </div> 
+        <div id="myForm"> 
+            <hr /> 
+            Height: <input type="text" id="height" value="30%" /><br />              Width: <input type="text" id="width" value="5%" /><br /> 
+            <br /> 
+            Roof Color: 
+            <select id="roofcolor"> 
+                <option value="silver">Silver</option>                  <option value="green">Green</option>                  <option value="Red">Red</option>                  <option value="blue" selected>Blue</option> 
+            </select> 
+            <br />              Please <span id="window"></span>customize windows<span id="window"></span>               <br>Window Height: <input type="text" id="windowheight" value="5%" /><br />              <br>Window width: <input type="text" id="windowwidth" value="5%" /><br />               
+            <br /> 
+            Wall Color: 
+            <select id="wallcolor"> 
+                <option value="silver">Silver</option>                  <option value="green">Green</option>                  <option value="Red">Red</option>                  <option value="blue" selected>Green</option> 
+            </select> 
+            <br /> 
+            Door Color: 
+            <select id="doorcolor"> 
+                <option value="silver">Silver</option>                  <option value="green">Green</option>                  <option value="Red">Red</option>                  <option value="blue" selected>Red</option> 
+            </select> 
+            <br /> 
+             
+            <button onclick="customize();">Customize</button> 
+        </div> 
+    </body> 
+</html> 
